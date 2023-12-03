@@ -6,7 +6,7 @@ import { checkDateType, checkHtmlType, checkImageType } from '../../../utils/Glo
 import { useDispatch } from 'react-redux';
 import { remove } from '../../../store/userSlice';
 
-const Table3 = ({ data, tableStructure, handleDelete }) => {
+const Table3 = ({ data, tableStructure, handleDelete, handleEdit }) => {
 
     const dispatch = useDispatch();
 
@@ -135,6 +135,7 @@ const Table3 = ({ data, tableStructure, handleDelete }) => {
                         key={0}
                         onClick={() => {
                             closeMenu();
+                            handleEdit(row?.original);
                         }}
                         sx={{ m: 0 }}
                     >
