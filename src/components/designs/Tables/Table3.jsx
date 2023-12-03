@@ -109,22 +109,21 @@ const Table3 = ({ data, tableStructure, handleDelete, handleEdit }) => {
                                 gap: '0.5rem',
                                 p: '8px',
                                 justifyContent: 'space-between',
+                                alignItems: 'center'
                             })}
                         >
                             <Box sx={{ display: 'flex', gap: '0.5rem', alignItems: 'center' }}>
                                 <MRT_TopToolbar table={table} />
                             </Box>
                             <Box>
-                                <Box sx={{ display: 'flex', gap: '0.5rem' }}>
-                                    <Button
-                                        color="error"
-                                        disabled={!table.getIsSomeRowsSelected()}
-                                        onClick={handleDeactivate}
-                                        variant="contained"
-                                    >
-                                        Delete All
-                                    </Button>
-                                </Box>
+                                <Button
+                                    color="error"
+                                    disabled={!table.getIsSomeRowsSelected()}
+                                    onClick={handleDeactivate}
+                                    variant="contained"
+                                >
+                                    <Delete />
+                                </Button>
                             </Box>
                         </Box>
                     )

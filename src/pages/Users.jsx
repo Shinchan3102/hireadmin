@@ -56,7 +56,7 @@ const Users = () => {
     return (
         <div className='bg-white rounded-xl flex-1 overflow-auto gap-8 flex flex-col'>
             <NewHeader title={'Users'} />
-            <div className='px-8 flex-1 overflow-auto pb-6'>
+            <div className='md:px-8 px-4 flex-1 overflow-auto pb-6'>
                 {
                     users &&
                     <Table3
